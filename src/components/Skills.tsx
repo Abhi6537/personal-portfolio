@@ -17,6 +17,20 @@ const skills = [
     level: 90
   },
   {
+    name: 'Next.js',
+    icon: Code,
+    color: 'bg-gray-800',
+    fact: 'Full-stack React framework pro',
+    level: 85
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: Palette,
+    color: 'bg-cyan-500',
+    fact: 'Utility-first CSS wizard',
+    level: 90
+  },
+  {
     name: 'Design',
     icon: Palette,
     color: 'bg-pink-500',
