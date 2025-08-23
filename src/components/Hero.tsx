@@ -55,7 +55,7 @@ export const Hero = () => {
           animateText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}>
           <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-            Creative Developer & Digital Artist
+            Frontend Developer
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Crafting beautiful experiences where code meets creativity. 
