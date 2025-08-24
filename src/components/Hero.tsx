@@ -10,7 +10,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-6 py-20 pt-32">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-6 py-20">
       {/* Floating creative elements */}
       <div className="absolute inset-0 pointer-events-none">
         <img 
@@ -55,7 +55,7 @@ export const Hero = () => {
           animateText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}>
           <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-            Frontend Developer
+            Creative Developer & Digital Artist
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Crafting beautiful experiences where code meets creativity. 
@@ -63,6 +63,14 @@ export const Hero = () => {
           </p>
         </div>
 
+        {/* CTA Button */}
+        <div className={`mt-12 transition-all duration-1000 delay-1000 ${
+          animateText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}>
+          <button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg font-medium text-lg shadow-float transition-smooth hover:shadow-2xl hover:scale-105">
+            View My Work
+          </button>
+        </div>
       </div>
     </section>
   );
