@@ -44,20 +44,7 @@ export const Header = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigationLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="text-muted-foreground hover:text-accent transition-smooth font-medium"
-              >
-                {link.label}
-              </button>
-            ))}
-          </nav>
-
-          {/* Theme Toggle & Mobile Menu */}
+          {/* Theme Toggle & Menu */}
           <div className="flex items-center space-x-4">
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
@@ -70,10 +57,10 @@ export const Header = () => {
               )}
             </button>
 
-            {/* Mobile Menu Button */}
+            {/* Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden w-10 h-10 rounded-lg bg-secondary hover:bg-accent/20 flex items-center justify-center transition-smooth"
+              className="w-10 h-10 rounded-lg bg-secondary hover:bg-accent/20 flex items-center justify-center transition-smooth"
             >
               {isMenuOpen ? (
                 <X className="w-5 h-5 text-accent" />
@@ -84,9 +71,9 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Navigation Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 py-4 border-t border-border">
+          <nav className="mt-4 py-4 border-t border-border">
             <div className="grid grid-cols-2 gap-4">
               {navigationLinks.map((link) => {
                 const Icon = link.icon;

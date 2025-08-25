@@ -1,4 +1,4 @@
-import { Heart, ArrowUp, Home, User, BookOpen, GraduationCap, Briefcase, Mail } from 'lucide-react';
+import { Home, User, BookOpen, GraduationCap, Briefcase, Mail } from 'lucide-react';
 
 export const Footer = () => {
   const scrollToTop = () => {
@@ -89,21 +89,9 @@ export const Footer = () => {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             {/* Copyright */}
-            <div className="flex items-center space-x-2 text-muted-foreground">
+            <div className="text-center text-muted-foreground">
               <span>© 2025 All Rights Reserved - Abhinandan Ghosh</span>
-              <Heart className="w-4 h-4 text-accent" />
             </div>
-
-            {/* Back to top */}
-            <button
-              onClick={scrollToTop}
-              className="flex items-center space-x-2 text-muted-foreground hover:text-accent transition-smooth group"
-            >
-              <span className="text-sm">Back to top</span>
-              <div className="w-8 h-8 bg-secondary hover:bg-accent/20 rounded-full flex items-center justify-center group-hover:bg-accent/20 transition-smooth">
-                <ArrowUp className="w-4 h-4 group-hover:scale-110 transition-transform" />
-              </div>
-            </button>
           </div>
         </div>
 

@@ -112,40 +112,6 @@ export const About = () => {
           </div>
         </div>
 
-        {/* Career Journey */}
-        <div className={`transition-all duration-1000 delay-600 ${
-          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
-          <h3 className="font-handwritten text-3xl font-bold text-primary text-center mb-12">
-            My Journey
-          </h3>
-          <div className="space-y-8">
-            {journey.map((step, index) => (
-              <div
-                key={step.year}
-                className={`flex items-start space-x-6 ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
-              >
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                    <Calendar className="w-6 h-6 text-white" />
-                  </div>
-                </div>
-                <div className={`bg-card p-6 rounded-2xl shadow-paper flex-1 ${
-                  index % 2 === 0 ? 'md:text-left' : 'md:text-right'
-                }`}>
-                  <div className="flex items-center space-x-2 mb-2">
-                    <span className="font-handwritten text-xl font-bold text-accent">{step.year}</span>
-                    <Briefcase className="w-4 h-4 text-muted-foreground" />
-                  </div>
-                  <h4 className="font-semibold text-lg text-foreground mb-2">{step.title}</h4>
-                  <p className="text-muted-foreground">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

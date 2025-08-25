@@ -51,70 +51,10 @@ export const Contact = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className={`transition-all duration-1000 delay-300 ${
-            inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
-          }`}>
-            <div className="bg-card shadow-paper rounded-2xl p-8 torn-top">
-              <h3 className="font-handwritten text-3xl font-semibold text-primary mb-6">
-                Drop me a line
-              </h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
-                    placeholder="What should I call you?"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Your Message
-                  </label>
-                  <textarea
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    rows={5}
-                    className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors resize-none"
-                    placeholder="Tell me about your project or just say hello..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-4 rounded-lg font-medium text-lg transition-all duration-300 hover:shadow-float hover:scale-[1.02] flex items-center justify-center space-x-2"
-                >
-                  <Send className="w-5 h-5" />
-                  <span>Send Message</span>
-                </button>
-              </form>
-            </div>
-          </div>
-
+        <div className="max-w-4xl mx-auto">
           {/* Contact Info & Social */}
-          <div className={`space-y-8 transition-all duration-1000 delay-600 ${
-            inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+          <div className={`space-y-8 transition-all duration-1000 delay-300 ${
+            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             {/* Contact Info */}
             <div className="bg-gradient-to-br from-accent/10 to-primary/10 rounded-2xl p-6 shadow-paper">
