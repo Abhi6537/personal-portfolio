@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Camera, Trophy, Film, MapPin, Calendar, Briefcase } from 'lucide-react';
 import tornPaper from '@/assets/torn-paper.png';
 
 export const About = () => {
@@ -22,8 +23,21 @@ export const About = () => {
     return () => observer.disconnect();
   }, []);
 
+  const hobbies = [
+    { name: 'Photography', icon: Camera, description: 'Capturing moments and perspectives' },
+    { name: 'Cricket', icon: Trophy, description: 'Playing and following the sport' },
+    { name: 'Movies', icon: Film, description: 'Exploring different genres and stories' },
+  ];
+
+  const journey = [
+    { year: '2020', title: 'Started Web Development', description: 'Began learning HTML, CSS, and JavaScript' },
+    { year: '2021', title: 'Frontend Focus', description: 'Mastered React and modern frontend frameworks' },
+    { year: '2022', title: 'UI/UX Design', description: 'Expanded into design with Figma and user experience' },
+    { year: '2023-Present', title: 'Full Stack Journey', description: 'Currently learning backend technologies' },
+  ];
+
   return (
-    <section ref={sectionRef} className="py-20 px-6 relative">
+    <section id="about" ref={sectionRef} className="py-20 px-6 relative">
       {/* Torn paper background */}
       <div className="absolute inset-0 -z-10">
         <div 
@@ -38,7 +52,7 @@ export const About = () => {
         />
       </div>
 
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-1000 ${
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
@@ -48,76 +62,88 @@ export const About = () => {
           <div className="w-24 h-1 bg-accent mx-auto rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Text content */}
-          <div className={`space-y-6 transition-all duration-1000 delay-300 ${
-            inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
-          }`}>
+        {/* Short Bio */}
+        <div className={`mb-16 transition-all duration-1000 delay-200 ${
+          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <div className="max-w-4xl mx-auto text-center">
             <div className="relative">
-              <p className="text-lg leading-relaxed text-foreground">
-                I'm a passionate developer who believes in the magic that happens when 
-                <span className="font-handwritten text-xl text-accent font-semibold"> beautiful design </span>
-                meets clean code. My journey started with doodling in notebooks and evolved 
-                into crafting digital experiences that tell stories.
+              <p className="text-xl leading-relaxed text-foreground mb-6">
+                I'm a passionate 
+                <span className="font-handwritten text-2xl text-accent font-semibold"> Frontend Developer </span>
+                and UI/UX Designer who believes in creating digital experiences that matter. 
+                Currently expanding my skills into backend development to become a well-rounded web developer.
               </p>
               
-              {/* Hand-drawn line accent */}
-              <svg className="absolute -left-4 top-0 w-3 h-full" viewBox="0 0 12 200">
-                <path
-                  d="M6 0 Q3 50 9 100 Q3 150 6 200"
-                  stroke="hsl(var(--accent))"
-                  strokeWidth="2"
-                  fill="none"
-                  className="opacity-30"
-                />
-              </svg>
-            </div>
-
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              When I'm not coding, you'll find me sketching new ideas, exploring 
-              design trends, or experimenting with the latest creative tools. 
-              I love turning complex problems into simple, elegant solutions.
-            </p>
-
-            <div className="flex flex-wrap gap-3 pt-4">
-              <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                Creative Problem Solver
-              </span>
-              <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Detail Oriented
-              </span>
-              <span className="px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium">
-                Team Player
-              </span>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                My approach combines technical expertise with creative thinking, ensuring every project 
+                not only functions flawlessly but also provides an exceptional user experience.
+              </p>
             </div>
           </div>
+        </div>
 
-          {/* Visual element */}
-          <div className={`relative transition-all duration-1000 delay-600 ${
-            inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-          }`}>
-            <div className="bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl p-8 shadow-paper">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-accent rounded-full animate-pulse" />
-                  <span className="font-handwritten text-lg text-primary">
-                    Currently crafting amazing experiences
-                  </span>
+        {/* Hobbies Section */}
+        <div className={`mb-16 transition-all duration-1000 delay-400 ${
+          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <h3 className="font-handwritten text-3xl font-bold text-primary text-center mb-8">
+            When I'm Not Coding
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {hobbies.map((hobby, index) => {
+              const Icon = hobby.icon;
+              return (
+                <div
+                  key={hobby.name}
+                  className="bg-card p-6 rounded-2xl shadow-paper hover:shadow-float transition-smooth hover:scale-105 transform rotate-1 hover:rotate-0"
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  <div className="text-center space-y-4">
+                    <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto">
+                      <Icon className="w-8 h-8 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-lg text-foreground">{hobby.name}</h4>
+                    <p className="text-sm text-muted-foreground">{hobby.description}</p>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-primary rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
-                  <span className="font-handwritten text-lg text-primary">
-                    Always learning something new
-                  </span>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Career Journey */}
+        <div className={`transition-all duration-1000 delay-600 ${
+          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <h3 className="font-handwritten text-3xl font-bold text-primary text-center mb-12">
+            My Journey
+          </h3>
+          <div className="space-y-8">
+            {journey.map((step, index) => (
+              <div
+                key={step.year}
+                className={`flex items-start space-x-6 ${
+                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                }`}
+              >
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                    <Calendar className="w-6 h-6 text-white" />
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-secondary-foreground rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-                  <span className="font-handwritten text-lg text-primary">
-                    Open to exciting opportunities
-                  </span>
+                <div className={`bg-card p-6 rounded-2xl shadow-paper flex-1 ${
+                  index % 2 === 0 ? 'md:text-left' : 'md:text-right'
+                }`}>
+                  <div className="flex items-center space-x-2 mb-2">
+                    <span className="font-handwritten text-xl font-bold text-accent">{step.year}</span>
+                    <Briefcase className="w-4 h-4 text-muted-foreground" />
+                  </div>
+                  <h4 className="font-semibold text-lg text-foreground mb-2">{step.title}</h4>
+                  <p className="text-muted-foreground">{step.description}</p>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

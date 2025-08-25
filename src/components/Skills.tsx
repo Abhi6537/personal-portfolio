@@ -1,48 +1,33 @@
 import { useEffect, useRef, useState } from 'react';
-import { Code, Palette, Zap, Coffee, Heart, Star } from 'lucide-react';
+import { Code, Palette, Zap, Coffee, Heart, Star, Monitor, Figma, Users, Lightbulb, Target, Settings } from 'lucide-react';
 
-const skills = [
+const skillCategories = [
   {
-    name: 'React',
-    icon: Code,
-    color: 'bg-blue-500',
-    fact: 'Built 50+ React projects!',
-    level: 95
+    title: 'Technical Skills',
+    skills: [
+      { name: 'HTML', icon: Code, fact: 'Semantic markup master!', level: 95 },
+      { name: 'CSS', icon: Palette, fact: 'Flexbox and Grid wizard', level: 90 },
+      { name: 'JavaScript', icon: Zap, fact: 'ES6+ enthusiast', level: 88 },
+      { name: 'React', icon: Code, fact: 'Built 50+ React projects!', level: 92 },
+      { name: 'Tailwind CSS', icon: Settings, fact: 'Utility-first styling pro', level: 85 },
+      { name: 'Next.js', icon: Monitor, fact: 'Full-stack React framework', level: 80 },
+    ]
   },
   {
-    name: 'TypeScript',
-    icon: Zap,
-    color: 'bg-blue-600',
-    fact: 'Type safety is my superpower',
-    level: 90
+    title: 'Design Tools',
+    skills: [
+      { name: 'Figma', icon: Figma, fact: 'Design systems architect', level: 88 },
+      { name: 'Photoshop', icon: Star, fact: 'Image manipulation expert', level: 75 },
+      { name: 'Adobe XD', icon: Target, fact: 'Prototyping specialist', level: 70 },
+    ]
   },
   {
-    name: 'Design',
-    icon: Palette,
-    color: 'bg-pink-500',
-    fact: 'Figma is my second home',
-    level: 85
-  },
-  {
-    name: 'Node.js',
-    icon: Coffee,
-    color: 'bg-green-600',
-    fact: 'Coffee-powered backend magic',
-    level: 80
-  },
-  {
-    name: 'UI/UX',
-    icon: Heart,
-    color: 'bg-red-500',
-    fact: 'User experience obsessed',
-    level: 88
-  },
-  {
-    name: 'Animation',
-    icon: Star,
-    color: 'bg-yellow-500',
-    fact: 'Making things dance since 2020',
-    level: 75
+    title: 'Soft Skills',
+    skills: [
+      { name: 'Problem-solving', icon: Lightbulb, fact: 'Breaking down complex issues', level: 90 },
+      { name: 'Creativity', icon: Heart, fact: 'Thinking outside the box', level: 95 },
+      { name: 'Teamwork', icon: Users, fact: 'Collaboration is key', level: 85 },
+    ]
   }
 ];
 
@@ -69,8 +54,8 @@ export const Skills = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 px-6 bg-gradient-to-br from-background to-secondary/30">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" ref={sectionRef} className="py-20 px-6 bg-gradient-to-br from-background to-secondary/30">
+      <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-1000 ${
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
@@ -79,64 +64,88 @@ export const Skills = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             The skills and tools I use to bring ideas to life. 
-            <span className="font-handwritten text-accent text-xl"> Hover for fun facts!</span>
+            <span className="font-handwritten text-accent text-xl"> Hover for insights!</span>
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-          {skills.map((skill, index) => {
-            const Icon = skill.icon;
-            return (
-              <div
-                key={skill.name}
-                className={`relative group cursor-pointer transition-all duration-500 ${
-                  inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-                onMouseEnter={() => setHoveredSkill(skill.name)}
-                onMouseLeave={() => setHoveredSkill(null)}
-              >
-                {/* Sticker background */}
-                <div className="bg-card shadow-polaroid rounded-2xl p-6 transform rotate-1 group-hover:rotate-0 transition-all duration-300 group-hover:scale-105 group-hover:shadow-float">
-                  <div className="text-center space-y-4">
-                    {/* Icon */}
-                    <div className={`w-16 h-16 ${skill.color} rounded-full flex items-center justify-center mx-auto group-hover:animate-sticker-bounce`}>
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                    
-                    {/* Skill name */}
-                    <h3 className="font-semibold text-lg text-foreground">
-                      {skill.name}
-                    </h3>
+        <div className="space-y-16">
+          {skillCategories.map((category, categoryIndex) => (
+            <div
+              key={category.title}
+              className={`transition-all duration-1000 ${
+                inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${categoryIndex * 200}ms` }}
+            >
+              <h3 className="font-handwritten text-3xl font-bold text-primary text-center mb-8">
+                {category.title}
+              </h3>
+              
+              <div className={`grid ${
+                category.skills.length <= 3 ? 'grid-cols-1 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-6'
+              } gap-6`}>
+                {category.skills.map((skill, skillIndex) => {
+                  const Icon = skill.icon;
+                  const colorClasses = [
+                    'bg-blue-500', 'bg-green-500', 'bg-purple-500', 
+                    'bg-red-500', 'bg-yellow-500', 'bg-indigo-500'
+                  ];
+                  const colorClass = colorClasses[skillIndex % colorClasses.length];
+                  
+                  return (
+                    <div
+                      key={skill.name}
+                      className={`relative group cursor-pointer transition-all duration-500 ${
+                        inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                      }`}
+                      style={{ transitionDelay: `${(categoryIndex * 200) + (skillIndex * 100)}ms` }}
+                      onMouseEnter={() => setHoveredSkill(skill.name)}
+                      onMouseLeave={() => setHoveredSkill(null)}
+                    >
+                      {/* Sticker background */}
+                      <div className="bg-card shadow-polaroid rounded-2xl p-6 transform rotate-1 group-hover:rotate-0 transition-all duration-300 group-hover:scale-105 group-hover:shadow-float">
+                        <div className="text-center space-y-4">
+                          {/* Icon */}
+                          <div className={`w-14 h-14 ${colorClass} rounded-full flex items-center justify-center mx-auto group-hover:animate-sticker-bounce`}>
+                            <Icon className="w-7 h-7 text-white" />
+                          </div>
+                          
+                          {/* Skill name */}
+                          <h4 className="font-semibold text-sm text-foreground">
+                            {skill.name}
+                          </h4>
 
-                    {/* Progress bar */}
-                    <div className="w-full bg-secondary rounded-full h-2">
-                      <div 
-                        className={`h-2 bg-accent rounded-full transition-all duration-1000 delay-500 ${
-                          inView ? 'w-full' : 'w-0'
-                        }`}
-                        style={{ width: inView ? `${skill.level}%` : '0%' }}
-                      />
-                    </div>
+                          {/* Progress bar */}
+                          <div className="w-full bg-secondary rounded-full h-2">
+                            <div 
+                              className={`h-2 bg-accent rounded-full transition-all duration-1000 delay-500 ${
+                                inView ? 'w-full' : 'w-0'
+                              }`}
+                              style={{ width: inView ? `${skill.level}%` : '0%' }}
+                            />
+                          </div>
 
-                    {/* Fun fact tooltip */}
-                    <div className={`absolute -top-16 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-3 py-2 rounded-lg text-sm font-medium shadow-lg transition-all duration-300 pointer-events-none ${
-                      hoveredSkill === skill.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
-                    }`}>
-                      <div className="font-handwritten text-base">
-                        {skill.fact}
+                          {/* Fun fact tooltip */}
+                          <div className={`absolute -top-16 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-3 py-2 rounded-lg text-xs font-medium shadow-lg transition-all duration-300 pointer-events-none whitespace-nowrap ${
+                            hoveredSkill === skill.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
+                          }`}>
+                            <div className="font-handwritten text-sm">
+                              {skill.fact}
+                            </div>
+                            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-primary" />
+                          </div>
+                        </div>
                       </div>
-                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-primary" />
-                    </div>
-                  </div>
-                </div>
 
-                {/* Decorative elements */}
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full opacity-70 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute -bottom-1 -left-1 w-4 h-4 bg-primary rotate-45 opacity-50 group-hover:opacity-80 transition-opacity" />
+                      {/* Decorative elements */}
+                      <div className="absolute -top-2 -right-2 w-5 h-5 bg-accent rounded-full opacity-70 group-hover:opacity-100 transition-opacity" />
+                      <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-primary rotate-45 opacity-50 group-hover:opacity-80 transition-opacity" />
+                    </div>
+                  );
+                })}
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>
