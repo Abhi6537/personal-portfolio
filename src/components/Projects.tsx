@@ -4,9 +4,9 @@ import { ExternalLink, Github, Eye } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'A modern shopping experience with smooth animations and intuitive design.',
-    tech: ['React', 'TypeScript', 'Stripe'],
+    title: 'Mess Sathi Web Application',
+    description: '1st Runner-Up – JISTECH App E-Teaser, 2025. A mess finder app using React and Flask with authentication, location filtering, and user dashboard.',
+    tech: ['React', 'Flask', 'Git', 'VS Code'],
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop',
     demoUrl: '#',
     codeUrl: '#',
@@ -14,30 +14,20 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'Collaborative workspace with real-time updates and beautiful UI.',
-    tech: ['Next.js', 'Firebase', 'Framer Motion'],
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop',
-    demoUrl: '#',
-    codeUrl: '#',
-    featured: false
-  },
-  {
-    id: 3,
-    title: 'Creative Portfolio',
-    description: 'Interactive portfolio showcasing creative development skills.',
-    tech: ['React', 'Three.js', 'GSAP'],
+    title: 'Portfolio Website',
+    description: 'Personal portfolio showcasing my skills and projects with creative design and smooth animations.',
+    tech: ['React', 'TypeScript', 'Tailwind CSS'],
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop',
     demoUrl: '#',
     codeUrl: '#',
     featured: true
   },
   {
-    id: 4,
-    title: 'Weather Dashboard',
-    description: 'Beautiful weather app with location-based forecasts.',
-    tech: ['Vue.js', 'OpenWeather API', 'Chart.js'],
-    image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop',
+    id: 3,
+    title: 'Learning Management System',
+    description: 'A comprehensive LMS with user authentication, course management, and progress tracking features.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Python'],
+    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop',
     demoUrl: '#',
     codeUrl: '#',
     featured: false
@@ -81,7 +71,7 @@ export const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={project.id}

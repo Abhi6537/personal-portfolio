@@ -27,8 +27,10 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo/Name */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center shadow-paper">
-              <span className="font-handwritten text-xl font-bold text-white">A</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center shadow-paper overflow-hidden">
+              <div className="w-full h-full bg-gradient-to-br from-purple-600/30 to-blue-600/30 flex items-center justify-center text-lg">
+                🧑‍💻
+              </div>
             </div>
             <div>
               <h1 className="font-handwritten text-xl font-bold text-primary">Abhinandan Ghosh</h1>

@@ -19,7 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'handwritten': ['Caveat', 'cursive'],
+				'handwritten': ['Kalam', 'cursive'],
 				'sans': ['Inter', 'sans-serif'],
 			},
 			colors: {

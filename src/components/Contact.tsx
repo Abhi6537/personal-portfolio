@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Mail, Github, Linkedin, Twitter, Send, Coffee } from 'lucide-react';
+import { Mail, Github, Linkedin, Twitter, Send, Coffee, Instagram, Facebook } from 'lucide-react';
 
 export const Contact = () => {
   const [inView, setInView] = useState(false);
@@ -32,6 +32,8 @@ export const Contact = () => {
   const socialLinks = [
     { icon: Github, label: 'GitHub', url: '#', color: 'hover:text-gray-800' },
     { icon: Linkedin, label: 'LinkedIn', url: '#', color: 'hover:text-blue-600' },
+    { icon: Instagram, label: 'Instagram', url: '#', color: 'hover:text-pink-600' },
+    { icon: Facebook, label: 'Facebook', url: '#', color: 'hover:text-blue-600' },
     { icon: Twitter, label: 'Twitter', url: '#', color: 'hover:text-blue-400' },
     { icon: Mail, label: 'Email', url: 'mailto:hello@example.com', color: 'hover:text-red-500' }
   ];
@@ -73,7 +75,7 @@ export const Contact = () => {
               <h3 className="font-handwritten text-2xl font-semibold text-primary mb-6">
                 Find me around the web
               </h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {socialLinks.map((social, index) => {
                   const Icon = social.icon;
                   return (

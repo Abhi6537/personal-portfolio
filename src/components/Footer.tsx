@@ -47,25 +47,8 @@ export const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Navigation */}
-          <div className="space-y-4">
-            <h4 className="font-handwritten text-2xl font-semibold text-primary">Quick Links</h4>
-            <div className="grid grid-cols-2 gap-2">
-              {quickLinks.map((link) => {
-                const Icon = link.icon;
-                return (
-                  <button
-                    key={link.id}
-                    onClick={() => scrollToSection(link.id)}
-                    className="flex items-center space-x-2 p-2 rounded-lg text-left text-muted-foreground hover:text-accent hover:bg-accent/10 transition-smooth group"
-                  >
-                    <Icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                    <span className="text-sm">{link.label}</span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
+          {/* Empty space for layout balance */}
+          <div></div>
 
           {/* Contact Info */}
           <div className="space-y-4">
@@ -90,7 +73,8 @@ export const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-center text-muted-foreground">
-              <span>© 2025 All Rights Reserved - Abhinandan Ghosh</span>
+              <span>© 2025 All Rights Reserved - </span>
+              <span className="font-handwritten text-orange-500 font-bold">Abhinandan Ghosh</span>
             </div>
           </div>
         </div>
