@@ -98,7 +98,7 @@ export const Education = () => {
                       {item.institution}
                     </h3>
                     <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium">
-                      {item.type === 'degree' ? 'Degree' : 'Certificate'}
+                      {item.type === 'degree' ? 'Degree' : 'Degree'}
                     </span>
                   </div>
 

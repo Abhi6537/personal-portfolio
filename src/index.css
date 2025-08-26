@@ -4,7 +4,7 @@
 
 /* Creative Journal Portfolio Design System */
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap');
 
 @layer base {
   :root {
@@ -138,13 +138,15 @@
       radial-gradient(circle at 80% 70%, hsl(var(--primary) / 0.03) 0%, transparent 30%);
   }
 
-  /* Typography */
+  /* Typography - Better fallbacks for mobile */
   .font-handwritten {
-    font-family: 'Kalam', cursive;
+    font-family: 'Kalam', 'Comic Sans MS', cursive;
+    font-display: swap;
   }
 
   .font-sans {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-display: swap;
   }
 
   /* Creative Animations */

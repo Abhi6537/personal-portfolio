@@ -32,10 +32,12 @@ export const Hero = () => {
         }`}>
           <div className="relative group">
             <div className="w-64 md:w-80 h-64 md:h-80 mx-auto bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl shadow-polaroid rotate-2 group-hover:rotate-0 transition-smooth overflow-hidden">
-              <div className="w-full h-full bg-secondary/50 flex items-center justify-center bg-gradient-to-br from-purple-600/20 to-blue-600/20">
-                <div className="w-full h-full bg-gradient-to-b from-transparent to-black/20 flex items-center justify-center text-4xl md:text-6xl font-bold text-white">
-                  📸
-                </div>
+              <div className="w-full h-full bg-secondary/50 flex items-center justify-center">
+                <img 
+                  src="/profile-image.png" 
+                  alt="Abhinandan Ghosh" 
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
               </div>
             </div>

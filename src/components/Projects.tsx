@@ -148,12 +148,6 @@ export const Projects = () => {
                   </div>
                 </div>
 
-                {/* Decorative corner element */}
-                {project.featured && (
-                  <div className="absolute -top-2 -right-2 bg-accent text-accent-foreground text-xs font-bold px-2 py-1 rounded-full transform rotate-12">
-                    ★
-                  </div>
-                )}
               </div>
 
               {/* Hand-drawn border effect */}
