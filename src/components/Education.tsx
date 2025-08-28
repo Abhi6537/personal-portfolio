@@ -24,27 +24,27 @@ export const Education = () => {
 
   const education = [
     {
-      institution: 'University Name',
-      degree: 'Bachelor of Computer Science',
-      duration: '2020 - 2024',
-      location: 'City, State',
+      institution: 'Jis College of Engineering',
+      degree: 'B.tech in Information Technology',
+      duration: '2024 - Present',
+      location: 'Kalyani,West Bengal',
       description: 'Focused on web development, software engineering, and computer science fundamentals.',
       type: 'degree'
     },
     {
-      institution: 'Design Institute',
-      degree: 'UI/UX Design Certificate',
-      duration: '2022',
-      location: 'Online',
-      description: 'Specialized in user interface design, user experience principles, and design thinking.',
+      institution: 'Jhargram Nanibala Vidyalaya',
+      degree: 'Higher Secondary ',
+      duration: '2021 - 2023',
+      location: 'Jhargram,West Bengal',
+      description: 'Science : 77% :  WBCHSE',
       type: 'certificate'
     },
     {
-      institution: 'Tech Academy',
-      degree: 'Frontend Development Certification',
-      duration: '2021',
-      location: 'Online',
-      description: 'Comprehensive training in React, JavaScript, and modern frontend technologies.',
+      institution: 'Chhay Hazari High School H.S',
+      degree: 'Secondary',
+      duration: '2011 - 2021',
+      location: 'Jhargram,West Bengal',
+      description: '91.85% : WBBSE',
       type: 'certificate'
     }
   ];
@@ -56,11 +56,11 @@ export const Education = () => {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <h2 className="font-handwritten text-5xl md:text-6xl font-bold text-primary mb-4">
-            Education
+            Academia.exe
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto rounded-full" />
           <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
-            My academic journey and continuous learning path in technology and design.
+            Not good at all but still survived 
           </p>
         </div>
 
@@ -148,13 +148,12 @@ export const Education = () => {
             <div className="flex items-center justify-center space-x-3 mb-4">
               <div className="w-3 h-3 bg-accent rounded-full animate-pulse" />
               <span className="font-handwritten text-2xl text-primary font-semibold">
-                Continuous Learning
+                You're close ! Scroll down to see my so called web devlopment 
               </span>
               <div className="w-3 h-3 bg-primary rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
             </div>
             <p className="text-muted-foreground">
-              Always staying updated with the latest technologies and design trends through 
-              online courses, workshops, and hands-on projects.
+              
             </p>
           </div>
         </div>

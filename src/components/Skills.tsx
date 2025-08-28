@@ -8,7 +8,8 @@ const skillCategories = [
       { name: 'HTML', icon: Code, fact: 'Semantic markup master!', level: 95 },
       { name: 'CSS', icon: Palette, fact: 'Flexbox and Grid wizard', level: 90 },
       { name: 'JavaScript', icon: Zap, fact: 'ES6+ enthusiast', level: 88 },
-      { name: 'React', icon: Code, fact: 'Built 50+ React projects!', level: 92 },
+      { name: 'TypeScript', icon: Code, fact: 'Type safety champion', level: 82 },
+      { name: 'React', icon: Code, fact: 'Built 2+ React projects!', level: 92 },
       { name: 'Tailwind CSS', icon: Settings, fact: 'Utility-first styling pro', level: 85 },
       { name: 'Next.js', icon: Monitor, fact: 'Full-stack React framework', level: 80 },
     ]
@@ -19,14 +20,7 @@ const skillCategories = [
       { name: 'Figma', icon: Figma, fact: 'Design systems architect', level: 88 },
       { name: 'Photoshop', icon: Star, fact: 'Image manipulation expert', level: 75 },
       { name: 'Adobe XD', icon: Target, fact: 'Prototyping specialist', level: 70 },
-    ]
-  },
-  {
-    title: 'Soft Skills',
-    skills: [
-      { name: 'Problem-solving', icon: Lightbulb, fact: 'Breaking down complex issues', level: 90 },
-      { name: 'Creativity', icon: Heart, fact: 'Thinking outside the box', level: 95 },
-      { name: 'Teamwork', icon: Users, fact: 'Collaboration is key', level: 85 },
+      { name: 'Canva', icon: Palette, fact: 'Quick design wizard', level: 82 },
     ]
   }
 ];
@@ -60,11 +54,11 @@ export const Skills = () => {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <h2 className="font-handwritten text-5xl md:text-6xl font-bold text-primary mb-6">
-            My Toolkit
+            Kaam Ki Cheezein
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            The skills and tools I use to bring ideas to life. 
-            <span className="font-handwritten text-accent text-xl"> Hover for insights!</span>
+            All the following are necessary but without 
+            <span className="font-handwritten text-accent text-xl"> ChatGPT </span> I'm skillless :(
           </p>
         </div>
 
@@ -81,14 +75,18 @@ export const Skills = () => {
                 {category.title}
               </h3>
               
-              <div className={`grid ${
-                category.skills.length <= 3 ? 'grid-cols-1 md:grid-cols-3' : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-6'
-              } gap-6`}>
+              <div className={`grid gap-6 ${
+                category.skills.length <= 3 
+                  ? 'grid-cols-1 md:grid-cols-3' 
+                  : category.skills.length === 4
+                  ? 'grid-cols-2 md:grid-cols-4'
+                  : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-7'
+              } ${category.skills.length === 4 ? 'max-w-5xl mx-auto' : ''}`}>
                 {category.skills.map((skill, skillIndex) => {
                   const Icon = skill.icon;
                   const colorClasses = [
                     'bg-blue-500', 'bg-green-500', 'bg-purple-500', 
-                    'bg-red-500', 'bg-yellow-500', 'bg-indigo-500'
+                    'bg-red-500', 'bg-yellow-500', 'bg-indigo-500', 'bg-cyan-500'
                   ];
                   const colorClass = colorClasses[skillIndex % colorClasses.length];
                   

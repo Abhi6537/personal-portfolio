@@ -29,42 +29,25 @@ export const Footer = () => {
       </div>
 
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
-          {/* Brand Section */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center shadow-paper">
-                <span className="font-handwritten text-xl font-bold text-white">A</span>
+        <div className="grid md:grid-cols-1 gap-12 mb-12">
+          {/* Brand Section - Centered */}
+          <div className="space-y-4 text-center">
+            <div className="flex items-center justify-center space-x-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center shadow-paper overflow-hidden">
+                <img 
+                  src="/profile-image.jpg" 
+                  alt="Abhinandan Ghosh" 
+                  className="w-full h-full object-cover rounded-lg"
+                />
               </div>
-              <div>
-                <h3 className="font-handwritten text-xl font-bold text-primary">Abhinandan Ghosh</h3>
-                <p className="text-sm text-muted-foreground">Frontend Developer & Designer</p>
+              <div className="text-left">
+                <h3 className=" text-xl font-bold text foreground">Abhinandan Ghosh</h3>
+                <p className="font-handwritten text-xs text-muted-foreground">Great things start with simple ideas</p>
               </div>
             </div>
-            <p className="text-muted-foreground leading-relaxed">
-              Creating beautiful digital experiences with passion and creativity. 
-              Always learning, always growing.
+            <p className="text-muted-foreground leading-relaxed max-w-md mx-auto">
+              
             </p>
-          </div>
-
-          {/* Empty space for layout balance */}
-          <div></div>
-
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="font-handwritten text-2xl font-semibold text-primary">Let's Connect</h4>
-            <div className="space-y-3">
-              <p className="text-muted-foreground">
-                Ready to work together on your next project?
-              </p>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="inline-flex items-center space-x-2 bg-accent hover:bg-accent/90 text-accent-foreground px-4 py-2 rounded-lg font-medium text-sm shadow-paper transition-smooth hover:shadow-float hover:scale-105"
-              >
-                <Mail className="w-4 h-4" />
-                <span>Get In Touch</span>
-              </button>
-            </div>
           </div>
         </div>
 

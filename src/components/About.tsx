@@ -24,9 +24,9 @@ export const About = () => {
   }, []);
 
   const hobbies = [
-    { name: 'Photography', icon: Camera, description: 'Capturing moments and perspectives' },
-    { name: 'Cricket', icon: Trophy, description: 'Playing and following the sport' },
-    { name: 'Movies', icon: Film, description: 'Exploring different genres and stories' },
+    { name: 'Capturing', icon: Camera, description: 'Camera Nahi hai vai :)' },
+    { name: 'Cricket', icon: Trophy, description: 'Bachpan ka pyaar <3 18' },
+    { name: 'Movies', icon: Film, description: 'Kitne bugs the? Sarkar, ginte ginte compiler crash ho gaya!' },
   ];
 
   const journey = [
@@ -57,7 +57,7 @@ export const About = () => {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <h2 className="font-handwritten text-5xl md:text-6xl font-bold text-primary mb-4">
-            About Me
+            Main kaun hoon ?
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto rounded-full" />
         </div>
@@ -69,15 +69,13 @@ export const About = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="relative">
               <p className="text-xl leading-relaxed text-foreground mb-6">
-                I'm a passionate 
-                <span className="font-handwritten text-2xl text-accent font-semibold"> Frontend Developer </span>
-                and UI/UX Designer who believes in creating digital experiences that matter. 
-                Currently expanding my skills into backend development to become a well-rounded web developer.
+               Just an ordinary techie who loves mixing code with creativity ! A 2nd-year IT student at
+                <span className="font-handwritten text-2xl text-accent font-semibold"> JISCE </span>
+                learning, building, and experimenting with technologies that shape the web. 
               </p>
               
               <p className="text-lg leading-relaxed text-muted-foreground">
-                My approach combines technical expertise with creative thinking, ensuring every project 
-                not only functions flawlessly but also provides an exceptional user experience.
+              Also a content writer : Intern at <span className="font-handwritten text-accent text-xl">InAmigos Foundation</span> for two weeks .
               </p>
             </div>
           </div>
@@ -88,7 +86,7 @@ export const About = () => {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <h3 className="font-handwritten text-3xl font-bold text-primary text-center mb-8">
-            When I'm Not Coding
+           Mandatory 
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             {hobbies.map((hobby, index) => {

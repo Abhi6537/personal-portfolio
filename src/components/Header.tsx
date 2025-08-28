@@ -29,7 +29,7 @@ export const Header = () => {
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center shadow-paper overflow-hidden">
               <img 
-                src="/profile-image.png" 
+                src="/profile-image.jpg" 
                 alt="Abhinandan Ghosh" 
                 className="w-full h-full object-cover rounded-lg"
               />
@@ -41,8 +41,6 @@ export const Header = () => {
                 <span className="text-muted-foreground">|</span>
                 <span className="text-accent">UI/UX</span>
                 <span className="text-muted-foreground">|</span> 
-                <span className="text-accent">Backend</span>
-                <span className="text-muted-foreground">|</span>
                 <span className="text-accent">Web Dev</span>
               </div>
             </div>

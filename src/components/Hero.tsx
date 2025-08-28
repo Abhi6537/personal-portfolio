@@ -34,7 +34,7 @@ export const Hero = () => {
             <div className="w-64 md:w-80 h-64 md:h-80 mx-auto bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl shadow-polaroid rotate-2 group-hover:rotate-0 transition-smooth overflow-hidden">
               <div className="w-full h-full bg-secondary/50 flex items-center justify-center">
                 <img 
-                  src="/profile-image.png" 
+                  src="/profile-image.jpg" 
                   alt="Abhinandan Ghosh" 
                   className="w-full h-full object-cover"
                 />
@@ -89,8 +89,9 @@ export const Hero = () => {
             animateText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
           }`}>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-              Passionate about creating beautiful, functional web experiences. 
-              I blend creativity with code to bring digital ideas to life.
+              App-e-Teaser <span className="font-handwritten text-accent text-xl">1st Runner Up</span> at JIStech'25. <br />            
+              Attended <span className="font-handwritten text-accent text-xl">Hack4Bengal 4.O</span> East India's Largest Hackathon. <br />
+              
             </p>
           </div>
 
@@ -98,10 +99,10 @@ export const Hero = () => {
           <div className={`space-y-4 transition-all duration-1000 delay-700 ${
             animateText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
           }`}>
-            <h3 className="font-handwritten text-2xl font-semibold text-primary">Resume</h3>
+            <h3 className="font-handwritten text-2xl font-semibold text-primary"></h3>
             <div className="flex flex-wrap gap-3 md:gap-4">
               <button 
-                onClick={() => window.open('/lovable-uploads/ea309ce0-1041-4549-ac3c-2ff8a81b6104.png', '_blank')}
+                onClick={() => window.open('/Uploads/ea309ce0-1041-4549-ac3c-2ff8a81b6104.png', '_blank')}
                 className="flex items-center space-x-2 bg-accent hover:bg-accent/90 text-accent-foreground px-4 md:px-6 py-2 md:py-3 rounded-lg font-medium text-sm shadow-paper transition-smooth hover:shadow-float hover:scale-105"
               >
                 <Eye className="w-4 h-4" />
@@ -111,7 +112,7 @@ export const Hero = () => {
                 onClick={() => {
                   // Create a downloadable PDF link (placeholder functionality)
                   const link = document.createElement('a');
-                  link.href = '/lovable-uploads/ea309ce0-1041-4549-ac3c-2ff8a81b6104.png';
+                  link.href = '/Uploads/ea309ce0-1041-4549-ac3c-2ff8a81b6104.png';
                   link.download = 'Abhinandan_Ghosh_Resume.pdf';
                   document.body.appendChild(link);
                   link.click();
