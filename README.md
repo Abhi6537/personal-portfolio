@@ -6,7 +6,7 @@ A modern web application built with **Vite**, **React**, **TypeScript**, **Tailw
 
 ## 🚀 Project Info
 
-- **Live URL:** [Your Live URL Here](https://example.com)
+- **Live URL: https://abhinadanghosh-portfolio.vercel.app/
 
 ---
 
