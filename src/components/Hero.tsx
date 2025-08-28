@@ -90,7 +90,7 @@ export const Hero = () => {
           }`}>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
               App-e-Teaser <span className="font-handwritten text-accent text-xl">1st Runner Up</span> at JIStech'25. <br />            
-              Attended <span className="font-handwritten text-accent text-xl">Hack4Bengal 4.O</span> East India's Largest Hackathon. <br />
+              Attended <span className="font-handwritten text-accent text-xl">Hack4Bengal 4.O</span>  <br />
               
             </p>
           </div>
