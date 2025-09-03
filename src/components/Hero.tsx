@@ -89,7 +89,7 @@ export const Hero = () => {
             animateText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
           }`}>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-              App-e-Teaser <span className="font-handwritten text-accent text-xl">1st Runner Up</span> at JIStech'25. <br />            
+              Won<span className="font-handwritten text-accent text-xl">JISTech'25</span> <br />            
               Attended <span className="font-handwritten text-accent text-xl">Hack4Bengal 4.O</span>  <br />
               
             </p>
