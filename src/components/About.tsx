@@ -71,11 +71,11 @@ export const About = () => {
               <p className="text-xl leading-relaxed text-foreground mb-6">
                Just an ordinary techie who loves mixing code with creativity ! A 2nd-year IT student at
                 <span className="font-handwritten text-2xl text-accent font-semibold"> JISCE </span>
-                learning, building, and experimenting with technologies that shape the web. 
+                learning, building, and experimenting with technologies that shape the web.
               </p>
               
               <p className="text-lg leading-relaxed text-muted-foreground">
-              Also a content writer : Intern at <span className="font-handwritten text-accent text-xl">InAmigos Foundation</span> for two weeks .
+               A content writer : Intern at <span className="font-handwritten text-accent text-xl">InAmigos Foundation</span> for two weeks .
               </p>
             </div>
           </div>
@@ -86,7 +86,7 @@ export const About = () => {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <h3 className="font-handwritten text-3xl font-bold text-primary text-center mb-8">
-           Mandatory 
+           Mandatory
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             {hobbies.map((hobby, index) => {
