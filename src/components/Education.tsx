@@ -148,7 +148,7 @@ export const Education = () => {
             <div className="flex items-center justify-center space-x-3 mb-4">
               <div className="w-3 h-3 bg-accent rounded-full animate-pulse" />
               <span className="font-handwritten text-2xl text-primary font-semibold">
-                You're close ! Scroll down to see my so called web devlopment 
+                You're close ! Go down to see my so called web devlopment :)
               </span>
               <div className="w-3 h-3 bg-primary rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
             </div>
