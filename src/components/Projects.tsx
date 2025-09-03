@@ -209,7 +209,7 @@ export const Projects = () => {
                   
                   {copiedToClipboard && (
                     <div className="text-center mt-2">
-                      <span className="text-sm text-green-600 font-medium">✓ Copied! (Ctrl+C)</span>
+                      <span className="text-sm text-green-600 font-medium">Copied (Ctrl+C)</span>
                     </div>
                   )}
                 </div>
